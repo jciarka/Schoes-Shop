@@ -1,0 +1,28 @@
+﻿@model string
+
+@{
+    ViewBag.Title = "Utwórz rolę";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container col-6">
+    <div class="cardrounded-0 shadow-sm m-4 bg-light ">
+        <div class="card-header">
+            Utwórz rolę
+        </div>
+        @using (Html.BeginForm())
+        {
+            <div class="card-body">
+                @Html.ValidationSummary()
+                <div class="form-group">
+                    <label>Nazwa Roli</label>
+                    @Html.TextBox("roleName", Model, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="card-footer">
+                <input type="submit" value="zapisz" class="btn btn-primary" />
+                @Html.ActionLink("Anuluj", "Index", null, new { @class = "btn btn-default" })
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,37 @@
+﻿@using SportsStore.Domain.Entities
+@using SportsStore.WebUI.Infrastructure.IEnumerableExtension
+@using SportsStore.WebUI.Models.ShopProducts
+@using SportsStore.WebUI.Models.ProductDetails
+@model SchoesListViewModel
+
+@{
+    ViewBag.Title = "Produkty";
+}
+
+
+<div class="row">
+    <!-- Filtry -->
+    <div class="col-xl-2 col-lg-3" id="filters">
+        @Html.Action("Filters", "ShopNav", new { schoesFilterInfo = Model.SchoesFilterInfo })
+    </div>
+
+    <!-- Buty -->
+    <div class="col-xl-10 col-lg-9" id="products">
+        <div class="container m-2 mb-5">
+            <div class="row justify-content-around">
+                @foreach (SchoesModel schoesModel in Model.Schoes)
+                {
+                    @Html.Partial("ProductCard", new SchoesDetailsViewModel
+                       {
+                           SchoesModel = schoesModel,
+                           ReturnUrl = Request.Url.PathAndQuery
+                       })
+                }
+            </div>
+            <div class="btn-group pull-right">
+                @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x, schoesFilterInfo = Model.SchoesFilterInfo }))
+            </div>
+        </div>
+    </div>
+</div>
+

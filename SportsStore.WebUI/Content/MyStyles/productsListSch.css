@@ -1,0 +1,171 @@
+
+/*---- Usunięcie podświetlania tekstu łączy---*/
+.noselect {
+    text-decoration: none !important;
+    color: black;
+}
+
+.noselect:hover {
+    text-decoration: none !important;
+    color: black;
+}
+/*----KONIEC Usunięcie podświetlania tekstu łączy---*/
+
+
+/*---- Wyraźne ikony w paneli promocji ze zdjęciami---*/
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 20px;
+    width: 20px;
+    outline: black;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-size: 80%, 80%;
+    border-radius: 0%;
+    border: 1px solid black;
+}
+
+
+
+
+/* Style do navbar ---*/
+.focused{
+    position: relative !important;
+    left: -5% !important;
+    width: 110% !important;
+    height: 100% !important;
+    z-index: 2;
+}
+/* KOniec Style do footera ---*/
+
+
+/* Style do navbar ---*/
+.container{
+
+    max-width: 1200px;
+    width: 100%;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+/*  ---*/
+
+
+/* Style do kafelków z produktami w głównym widoku ---*/
+.col{
+    padding: 10px !important;       /* szerokość odstępów między bregiem karyuy produktów, a kolumną */
+}
+
+.card{
+    width: 100%;
+    height: auto;
+}
+
+.card img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;
+}
+
+.card-text{
+    margin-top: -30px;
+}
+
+.card-text .fa{
+    color: #004792;
+    font-size: 10px;
+}
+
+.card-text h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-text h5{
+    font-size: 15px;
+}
+
+.overlay{
+    display: block;
+    opacity: 0%;
+    position: absolute;
+    top: 10%;
+    margin-left: 0;
+    width: 70px;
+}
+
+.card:hover .overlay{
+    opacity: 100%;
+    margin-left: 5px;
+    transition: 0.5s;
+}
+
+.overlay .fa{
+    cursor: pointer;
+    background-color: #004792;
+    color:white;
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+    padding: 7px;
+    margin: 5%;
+    margin-bottom: 5%
+}
+
+.overlay .btn-secondary{
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+/* KONIEC Style do kafelków z produktami w głównym widoku ---*/
+
+
+/* Style do widoku product details -- gwiazdeczki ---*/
+    .rating {
+        display: flex;
+        transform:rotateY(180deg);
+    }
+
+    .rating input {
+        display: none;
+    }
+
+    .rating label {
+        display:block;
+        cursor: pointer;
+        width: 50px;
+    }
+
+
+        .rating label:before {
+            content: '\f005';
+            font-family: fontAwesome;
+            color: darkslategrey;
+            position: absolute;
+            display: block;
+            top: -20px;
+            font-size: 40px;
+        }
+
+        .rating label:after {
+            content: '\f005';
+            font-family: fontAwesome;
+            color: gold;
+            position: absolute;
+            display: block;
+            opacity: 0;
+            top: -20px;
+            font-size: 40px;
+            transition: .5s;
+            text-shadow: 0 2pc 5pc rgba(0,0,0,.5);
+        }
+
+    .rating label:hover:after, 
+    .rating label:hover~label:after {
+        opacity: 1;
+    }
+
+    .rating input:checked ~ label:after {
+        opacity: 1;
+    }
+
+/* KONIEC Style do widoku product details -- gwiazdeczki ---*/

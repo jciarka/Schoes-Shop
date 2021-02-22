@@ -1,0 +1,39 @@
+﻿@model SportsStore.WebUI.Models.CreateUserModel
+
+@{
+    ViewBag.Title = "Utwórz użytkownika";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container col-6">
+    <div class="cardrounded-0 shadow-sm m-4 bg-light ">
+        <div class="card-header">
+            Utwórz użytkownika
+        </div>
+        @using (Html.BeginForm())
+        {
+            <div class="card-body">
+                @Html.ValidationSummary()
+                <div class="form-group">
+                    <label>Nazwa użytkownika</label>
+                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Name)
+                </div>
+                <div class="form-group">
+                    <label>e-mail</label>
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Email)
+                </div>
+                <div class="form-group">
+                    <label>Hasło</label>
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                    @Html.ValidationMessage("Password")
+                </div>
+            </div>
+            <div class="card-footer">
+                <input type="submit" value="zapisz" class="btn btn-primary" />
+                @Html.ActionLink("Anuluj", "Index", null, new { @class = "btn btn-default" })
+            </div>
+        }
+    </div>
+</div>

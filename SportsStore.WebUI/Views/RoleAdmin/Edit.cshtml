@@ -1,0 +1,93 @@
+﻿@using SportsStore.IdentityDomain.Entities
+@using Microsoft.AspNet.Identity.EntityFramework;
+@using SportsStore.WebUI.Infrastructure.HtmlHelpers;
+@model SportsStore.WebUI.Models.RoleEditModel
+
+@{
+    ViewBag.Title = $"Edycja przynależności do roli {Model.Role.Name}";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+
+        </div>
+
+
+
+
+            <div class="panel-body">
+                
+            </div>
+
+            <div class="panel-body">
+                
+            </div>
+
+            <div class="panel-footer">
+
+            </div>
+        }
+</div>
+
+
+<div class="container col-6">
+    <div class="cardrounded-0 shadow-sm m-4 bg-light ">
+        @using (Html.BeginForm())
+        {
+            @Html.Hidden("Role", Model.Role.Name)
+            <div class="card-header">
+                <h4>Edycja przynależności do roli @Model.Role.Name</h4>
+            </div>
+            <div class="card-body">
+                <h5>Dodaj użytkowników do roli @Model.Role.Name</h5>
+                <table class="table table-striped">
+                    <tr><th class="w-75">Nazwa użytkownika</th><th class="w-25 text-center">Dodaj do roli</th></tr>
+                    @if (Model.NonMembers.Count() == 0)
+                    {
+                        <tr><td colspan="2">Wszyscy użytkownicy pełnią tę rolę</td></tr>
+                    }
+                    else
+                    {
+                        foreach (AppUser user in Model.NonMembers)
+                        {
+                            <tr>
+                                <td class="w-75">@user.UserName</td>
+                                <td class="w-25 text-center">
+                                    <input type="checkbox" value="@user.Id" name="IdsToAdd" />
+                                </td>
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
+            <div class="card-body">
+                <h5>Usuń użytkowników z roli @Model.Role.Name</h5>
+                <table class="table table-striped">
+                    <tr><th class="w-75">Nazwa użytkownika</th><th class="w-25 text-center">Usuń z roli</th></tr>
+                    @if (Model.Members.Count() == 0)
+                    {
+                        <tr><td colspan="2">Wszyscy użytkownicy pełnią tę rolę</td></tr>
+                    }
+                    else
+                    {
+                        foreach (AppUser user in Model.Members)
+                        {
+                            <tr>
+                                <td class="w-75">@user.UserName</td>
+                                <td class="w-25 text-center">
+                                    <input type="checkbox" value="@user.Id" name="IdsToRemove" />
+                                </td>
+                            </tr>
+                        }
+                    }
+                </table>
+
+            </div>
+            <div class="card-footer">
+                <input type="submit" value="zapisz" class="btn btn-primary" />
+                @Html.ActionLink("Anuluj", "Index", null, new { @class = "btn btn-default" })
+            </div>
+        }
+    </div>
+</div>

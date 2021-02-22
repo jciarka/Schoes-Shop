@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/Content/ErrorStyles.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <nav class="navbar navbar-brand navbar-nav navbar-light" style="background-color:white">
+        <a class="navbar-brand" href="#">
+            <img src="~/Logo/PantofelekPLmin.png" />
+        </a>
+
+        <div class="collapse navbar-collapse float-right" id="navbarSupportedContent">
+            <a href=@Url.Action("Login","Account",new { returnUrl = Request.Url.PathAndQuery })>
+                <span class="glyphicon glyphicon-user">Zaloguj się</span>
+            </a>
+            <a href=@Url.Action("Index","Cart",new { returnUrl = Request.Url.PathAndQuery })>
+                <span class="glyphicon glyphicon-shopping-cart">Koszyk</span>
+            </a>
+        </div>
+    </nav>
+    <nav class="navbar navbar-light">
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+            <ul class="navbar">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                       role="button" data-toggle="dropdown">
+                        Obuwie dla niej
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Kozaki</a>
+                        <a class="dropdown-item" href="#">Półbuty</a>
+                        <a class="dropdown-item" href="#">Wisytowe</a>
+                        <a class="dropdown-item" href="#">Sportowe</a>
+                        <a class="dropdown-item" href="#">Sandały</a>
+                        <a class="dropdown-item" href="#">coś innego</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                       role="button" data-toggle="dropdown">
+                        Obuwie dla dniego
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Kozaki</a>
+                        <a class="dropdown-item" href="#">Półbuty</a>
+                        <a class="dropdown-item" href="#">Wisytowe</a>
+                        <a class="dropdown-item" href="#">Sportowe</a>
+                        <a class="dropdown-item" href="#">Sandały</a>
+                        <a class="dropdown-item" href="#">coś innego</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                       role="button" data-toggle="dropdown">
+                        Obuwie dla dziewczynek
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Kozaki</a>
+                        <a class="dropdown-item" href="#">Półbuty</a>
+                        <a class="dropdown-item" href="#">Wisytowe</a>
+                        <a class="dropdown-item" href="#">Sportowe</a>
+                        <a class="dropdown-item" href="#">Sandały</a>
+                        <a class="dropdown-item" href="#">coś innego</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                       role="button" data-toggle="dropdown">
+                        Obuwie dla chłopców
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Kozaki</a>
+                        <a class="dropdown-item" href="#">Półbuty</a>
+                        <a class="dropdown-item" href="#">Wisytowe</a>
+                        <a class="dropdown-item" href="#">Sportowe</a>
+                        <a class="dropdown-item" href="#">Sandały</a>
+                        <a class="dropdown-item" href="#">coś innego</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                       role="button" data-toggle="dropdown">
+                        Kurtki
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Kozaki</a>
+                        <a class="dropdown-item" href="#">Półbuty</a>
+                        <a class="dropdown-item" href="#">Wisytowe</a>
+                        <a class="dropdown-item" href="#">Sportowe</a>
+                        <a class="dropdown-item" href="#">Sandały</a>
+                        <a class="dropdown-item" href="#">coś innego</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                       role="button" data-toggle="dropdown">
+                        Akcesoria
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Kozaki</a>
+                        <a class="dropdown-item" href="#">Półbuty</a>
+                        <a class="dropdown-item" href="#">Wisytowe</a>
+                        <a class="dropdown-item" href="#">Sportowe</a>
+                        <a class="dropdown-item" href="#">Sandały</a>
+                        <a class="dropdown-item" href="#">coś innego</a>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row panel">
+        <div class="col-xs-3" id="categories">
+            @Html.Action("Menu", "Nav")
+        </div>
+        <div class="col-xs-8">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>

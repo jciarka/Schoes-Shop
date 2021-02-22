@@ -1,0 +1,160 @@
+﻿@using SportsStore.WebUI.Models.ProductDetails
+@model SchoesDetailsViewModel
+@{
+    ViewBag.Title = "Szczegóły" + Model.SchoesModel.SchoesModelName;
+}
+
+
+<div class="row justify-content-center m-0 p-0">
+    <!-- Buty -->
+    <div class="col-xl-6 col-lg-6 p-2 m-0">
+        <div class="card rounded-0 shadow-sm h-100 bg-light">
+            <img class="img-fluid m-auto" width="1200" height="800" src="~/Pictures/black.jpg">
+        </div>
+    </div>
+    <!-- Filtry -->
+    <div class="col-xl-3 col-lg-4 p-2 m-0">
+        <div class="card rounded-0 shadow-sm bg-light">
+            <div class="card-body text-center">
+                <div class="border-bottom border-dark mb-3">
+                    <h5 class="card-title">@Model.SchoesModel.Brand.BrandName</h5>
+                    <h6 class="card-title">@Model.SchoesModel.SchoesModelName</h6>
+                    <h4 class="card-title">@Model.SchoesModel.Price.ToString()</h4>
+                </div>
+
+                <div class="border-bottom border-dark mb-3">
+                    <p class="w-100 text-left mb-0">Ocena:</p>
+                    <p class="justify-content-center mt-0 mb-3">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                </div>
+
+                @using (Html.BeginForm("AddToCart","Cart", new { returnUrl = Model.ReturnUrl}))  //<--------------------
+                {
+            <div class="form-group">
+                <label class="float-left">Wybierz rozmiar:</label>
+                    @Html.Hidden("modelId", Model.SchoesModel.SchoesModelID)
+                    @Html.DropDownList("size", new SelectList(Model.SchoesModel.SizeArray), "wybierz rozmiar",
+                                new { @class = "form-control form-control-sm rounded-0" })
+            </div>
+
+                    <div class="border-bottom border-top border-dark mb-3">
+                        <p class="w-100 text-center m-1">W tym tygodniu </p>
+                        <p class="w-100 text-center m-1">Darmowa przesyłka i zwrot</p>
+                        <p class="w-100 text-center m-1">Skorzystaj już dziś</p>
+                        <p class="w-100 text-center m-1">Skorzystaj już dziś</p>
+                    </div>
+
+                    <button type="submit" class="rounded-0 btn btn-primary btn-lg w-75">Dodaj do koszyka</button>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-center m-0 p-0">
+    <!-- Filtry -->
+    <div class="col-xl-9 col-lg-10 p-2 m-0">
+        <div class="card rounded-0 shadow-sm p-3 bg-light bg-light">
+            <div class="card-body text-left border-bottom border-dark">
+                <h5 class="card-title">Opis produktu</h5>
+                <p class="card-text mt-2">@Model.SchoesModel.Description</p>
+            </div>
+
+            <div class="card-body text-left border-bottom border-dark">
+                <h5 class="card-title">Sposób wykonania</h5>
+                <div class="container  justify-content-around w-100 bg-light">
+                    <div class="row w-75 text-center w-100">
+                        <div class="col">
+                            <h6 class="font-weight-bold">Materiał cholewki</h6>
+                            @Model.SchoesModel.SoleFabric
+                        </div>
+                        <div class="col">
+                            <h6 class="font-weight-bold">Materiał cholewki</h6>
+                            @Model.SchoesModel.InsideFabric
+                        </div>
+                        <div class="col">
+                            <h6 class="font-weight-bold">Materiał cholewki</h6>
+                            @Model.SchoesModel.ShankFabric
+                        </div>
+                        <div class="col">
+                            <h6 class="font-weight-bold">Materiał cholewki</h6>
+                            @Model.SchoesModel.BindingMethod
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body text-left border-bottom border-dark">
+                <h5 class="card-title">Dodatkowe informacje</h5>
+                <div class="container  justify-content-around w-100 bg-light">
+                    <div class="row w-75 text-center w-100">
+                        <div class="col">
+                            <h6 class="font-weight-bold">Użytkownik</h6>
+                            @Model.SchoesModel.SchoesModelUser.SchoesModelUserName
+                        </div>
+                        <div class="col">
+                            <h6 class="font-weight-bold">Kategorie</h6>
+                            @foreach (var subCategory in Model.SchoesModel.SubCategory)
+                            {
+                                @subCategory.SubCategoryName<br>
+                            }
+                        </div>
+                        <div class="col">
+                            <h6 class="font-weight-bold">Przeznaczenie</h6>
+                            @foreach (var destiny in Model.SchoesModel.SchoesDestiny)
+                            {
+                                @destiny.SchoesDestinyName<br>
+                            }
+                        </div>
+                        <div class="col">
+                            <h6 class="font-weight-bold">Kraj produkcji</h6>
+                            @Model.SchoesModel.OriginCountry
+                        </div>
+                        <div class="col">
+                            <h6 class="font-weight-bold">Kolory</h6>
+                            @foreach (var colour in Model.SchoesModel.Colour)
+                            {
+                                @(colour)<br>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row justify-content-center m-0 p-0 mb-4">
+    <!-- Filtry -->
+    <div class="col-xl-9 col-lg-10 p-2 m-0">
+        <div class="card rounded-0 shadow-sm p-3 bg-light">
+            <div class="card-body w-75 m-auto">
+                <h4 class="card-title">Oceń produkt</h4>
+
+                @using (Html.BeginForm("Cart", "ShopProducts", new { schoesDetailsViewModel = Model }))
+                {
+                    <div class="rating text-center">
+                        <input type="radio" name="star" id="star1" value="1"><label for="star1"></label>
+                        <input type="radio" name="star" id="star2" value="2"><label for="star2"></label>
+                        <input type="radio" name="star" id="star3" value="3"><label for="star3"></label>
+                        <input type="radio" name="star" id="star4" value="4"><label for="star4"></label>
+                        <input type="radio" name="star" id="star5" value="5"><label for="star5"></label>
+                    </div>
+                    <div class="form-group mt-4">
+                        <label class="float-left">Twój komentarz:</label>
+                        @Html.TextArea("comment", null, new { @class = "form-control rounded-0 ", rows = 5 })
+                    </div>
+
+                    <button type="submit" class="rounded-0 btn btn-primary btn-lg w-100 m-auto" >Wyślij</button>
+                }
+            </div>
+        </div>
+    </div>
+</div>

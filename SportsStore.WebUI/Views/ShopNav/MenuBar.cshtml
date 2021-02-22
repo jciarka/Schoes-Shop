@@ -1,0 +1,95 @@
+﻿@using SportsStore.Domain.Entities.Additions
+@using SportsStore.WebUI.Infrastructure.IEnumerableExtension
+@model IEnumerable<SchoesModelUser>
+
+
+ <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm border-top border-bottom">
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+
+           <!--Bootstrap domyślnie nie ma elementów droopdown typu hover. Aby ragował tylko na najechanie myszą dodano
+            odpowiednią klasę CCS w znaczniku HEAD. Dodoatkowo any dropdown zajmował całą szerokość przeglądarki należy:
+            - do elementu o klasie "dropdown" dodać klasę "position-static"
+            - do elementu o klasie "dropdown-menu" dodać klasy "mt-0 w-100" oraz styl "margin-top: -10px !important; text-align:center"
+                style te są potrzebne aby podniść dropdown menu trochę do gury aby nie było przerwy między nim i elementem który go uruchamia
+            -->
+
+
+
+            @foreach (SchoesModelUser schoesModelUser in Model)
+            {
+                <li class="nav-item dropdown  position-static">
+                    <a class="nav-link dropdown-header" style="margin-left:10px; margin-right:10px " id="navbarDropdownMenuLink" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                       href=@Url.Action("List","ShopProducts",new { schoesModelUser = schoesModelUser.SchoesModelUserName })>
+                        <h5>Buty @schoesModelUser.SchoesModelUserText</h5>
+                    </a>
+                    <div class="dropdown-menu mt-0 w-100" style="margin-top: -10px !important; text-align:center" aria-labelledby="navbarDropdownMenuLink">
+                        <div>
+                            <table align="center">
+                                <thead>
+                                    <tr>
+                                        <th>Rodzaj obuwia</th>
+                                        <th>Przeznaczenie obuwia</th>
+                                        <th>Dostępne marki</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="menu-table-kolumn" style="border-right: 1px solid #ddd">
+                                            @foreach (string schoesSubCategory in schoesModelUser
+                                                .SchoesModel
+                                                .Select(schoesPair => schoesPair.SubCategory.Select(subcategory => subcategory.SubCategoryName))
+                                                .UnnestHierarchy()    //Własne roszerzenia przez dodanie iteratora
+                                                .Distinct()
+                                                .OrderBy(x => x))
+                                            {
+                                                <a class="dropdown-item" href=@Url.Action("List","ShopProducts",
+                                                                             new { schoesModelUser = schoesModelUser.SchoesModelUserName,
+                                                                                   subCategory = schoesSubCategory })>
+                                                   @schoesSubCategory
+                                                </a>
+                                            }
+                                        <td class="menu-table-kolumn" style="border-right: 1px solid #ddd">
+                                            @foreach (string schoesDestiny in schoesModelUser
+                                                .SchoesModel
+                                                .Select(schoesPair => schoesPair.SchoesDestiny.Select(destiny => destiny.SchoesDestinyName))
+                                                .UnnestHierarchy()    //Własne roszerzenia berzez dodanie iteratora
+                                                .Distinct()
+                                                .OrderBy(x => x))
+                                            {
+                                                <a class="dropdown-item" href=@Url.Action("List","ShopProducts",
+                                                                             new {  schoesModelUser = schoesModelUser.SchoesModelUserName,
+                                                                                    destiny = schoesDestiny })>
+                                                    @schoesDestiny
+                                                </a>
+                                            }
+                                        </td>
+
+
+                                        <td class="menu-table-kolumn">
+                                            @foreach (string brand in schoesModelUser
+                                                .SchoesModel
+                                                .Select(schoesPair => schoesPair.Brand.BrandName)
+                                                .Distinct()
+                                                .OrderBy(x => x))
+                                            {
+                                                <a class="dropdown-item" href=@Url.Action("List","ShopProducts",
+                                                                             new {  schoesModelUser = schoesModelUser.SchoesModelUserName, 
+                                                                                    brand = brand })>
+                                                    @brand
+                                                </a>
+                                            }
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+            }
+
+        </ul>
+    </div>
+</nav>

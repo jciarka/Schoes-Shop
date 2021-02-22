@@ -1,0 +1,60 @@
+﻿@model IEnumerable<SportsStore.Domain.Entities.SchoesModel>
+
+@{
+    ViewBag.Title = "Administracja: Wszystkie produkty";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container col-10">
+    <div class="cardrounded-0 shadow-sm m-4 bg-light ">
+        <div class="card-header">
+            <h4>Wszystkie produkty</h4>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped table-condensed table-bordered">
+                <tr>
+                    <th class="text-black-50 d-block text-center">Zdjęcie</th>
+                    <th>Nazwa</th>
+                    <th class="NumericCol">Cena</th>
+                    <th class="text-center">Akcje</th>
+                </tr>
+
+                @foreach (var schoesPair in Model)
+                {
+                    <tr>
+                        <td style="width: 150px" class="text-center">
+                            @if (schoesPair.SchoesImages.FirstOrDefault() != null)
+                            {
+                                <img class="img-thumbnail" width="100" height="100"
+                                     src="@Url.Action("GetImage", "ShopProducts", new { modelId = schoesPair.SchoesModelID })" />
+                            }
+                        </td>
+                        <td style="display: table-cell; vertical-align: middle;">       
+                                @schoesPair.SchoesModelName      
+                        </td> 
+                        <td style="width:150px; display: table-cell; vertical-align: middle;">
+                            <div>
+                                @schoesPair.Price.ToString() zł
+                            </div>
+                        </td>
+                        <td class="text-center" style="width: 150px; display: table-cell; vertical-align: middle;" >
+                            @using (Html.BeginForm("Delete", "Admin"))
+                            {
+                                @Html.Hidden("ProductID", schoesPair.SchoesModelID)
+
+                                @Html.ActionLink("Edytuj", "Edit", new { schoesPair.SchoesModelID }, new { @class = "btn btn-sm btn-warning" })
+                                <input type="submit" class="btn btn-sm btn-danger" value="Usuń" />
+                            }
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+        <div class="card-footer">
+            @Html.ActionLink("Dodaj nowy produkt", "Create", null, new { @class = "btn btn-success" })
+        </div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,28 @@
+﻿
+@if (ViewBag.IsAuthenticated)
+{
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-user-circle" style="font-size: 30px"></i><br />@ViewBag.UserName
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Moje konto</a>
+            <a class="dropdown-item" href="@Url.Action("Logout","Account",new {returnUrl = Request.Url.PathAndQuery})">Wyloguj   <i class="fa fa-sign-out" style="font-size: 20px"></i></a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item disabled" href="#">@ViewBag.UserName</a>
+            <a class="dropdown-item disabled" href="#">
+
+            </a>
+        </div>
+    </li>
+}
+else
+{
+    <li class="nav-item active">
+        <a class="nav-link text-center" href="@Url.Action("Login", "Account")">
+            <i class="fa fa-user-circle" style="font-size: 30px"></i><br />Zaluguj się
+        </a>
+    </li>
+}
+
+

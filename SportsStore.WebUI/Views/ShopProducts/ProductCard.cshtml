@@ -1,0 +1,54 @@
+﻿@using SportsStore.Domain.Entities
+@using SportsStore.WebUI.Infrastructure.IEnumerableExtension
+@using SportsStore.WebUI.Models.ProductDetails
+@model SchoesDetailsViewModel
+
+<div class="col col-12 col-md-6 col-xl-3">
+    <a text-decoration class="noselect" href="@Url.Action("ProductDetailsSite","ProductDetails",
+                                             new {modelId = Model.SchoesModel.SchoesModelID, returnUrl = Model.ReturnUrl})">
+        <div class="card rounded-0 shadow-sm" id="product">
+            @if (Model.SchoesModel.SchoesImages.FirstOrDefault() != null)
+            {
+                <img class="border-0 card-img-top img-thumbnail" width="150" height="150"
+                     src="@Url.Action("GetImage", "ShopProducts", new { modelId = Model.SchoesModel.SchoesModelID })" />
+            }
+            else
+            {
+                <img class="card-img-top" width="150" height="150" src="but1.jpg">
+            }
+            <div class="card-body text-center">
+                <p class="card-text mt-0">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <h5 style="margin-top:-20px">@Model.SchoesModel.SchoesModelName</h5>
+                <p style="margin-top: -10px">@Model.SchoesModel.Brand.BrandName</p>
+                <p style="margin-top:-10px">@Model.SchoesModel.Price</p>
+                <p style="margin:0px" class="border-top border-info" style="display: none" id="sizes">
+                    Rozmiary:<br>
+                    @foreach (int size in Model.SchoesModel.SizeArray)
+                    {
+                        @(size.ToString() + " ")
+                    }
+                </p>
+            </div>
+        </div>
+    </a>
+</div>
+
+
+<!--
+    <div class="overlay">
+        <button type="button" class="btn btn-secondary" title="Dodaj do koszyka">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="btn btn-secondary" title="Oceń i skomentuj produkt">
+            <i class="fa fa-heart-o" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="btn btn-secondary" title="Udostępnij">
+            <i class="fa fa-facebook-square"></i>
+        </button>
+    </div>
+-->

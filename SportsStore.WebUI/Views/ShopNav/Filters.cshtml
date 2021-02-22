@@ -1,0 +1,62 @@
+﻿@using SportsStore.Domain.Entities.Additions
+@using SportsStore.WebUI.Models.ShopNav
+@model SchoesFilterList
+
+
+@{
+    ViewBag.Title = "Produkty";
+}
+
+    <div class="card border-0 shadow-sm m-4 border-dark">
+        <div class="card-body">
+            <h5 class="card-title mb-5">Filtrowanie</h5>
+            
+            <!-- WAŻNE tutaj musi być fromularz wykorzystujące metodę GET, aby można było w inych widokach nawigować za pomocą return URL-->
+            @using (Html.BeginForm("List", "ShopProducts", FormMethod.Get)) { 
+                <p class="card-text">
+                    <div class="container">
+                        <div class="row">
+                            <div class="form-group col-12 col-sm-6 col-md-3 col-lg-12">
+                                <label for="schoesModelUser">Dla kogo:</label>
+                                @Html.DropDownListFor(m => m.SchoesFilterInfo.schoesModelUser,
+                                            new SelectList(Model.schoesModelUser),
+                                            "nieaktywny",
+                                            new { @class = "form-control form-control-sm", id = "schoesModelUser" })
+                            </div>
+
+                            <div class="form-group col-12 col-md-3 col-sm-6 col-lg-12">
+                                <label for="subCategory">Typ obuwia:</label>
+                                @Html.DropDownListFor(m => m.SchoesFilterInfo.subCategory,
+                                            new SelectList(Model.subCategory),
+                                            "nieaktywny",
+                                            new { @class = "form-control form-control-sm", id = "subCategory" })
+                            </div>
+
+                            <div class="form-group col-12 col-md-3 col-sm-6 col-lg-12">
+                                <label for="destiny">Przeznaczenie:</label>
+                                @Html.DropDownListFor(m => m.SchoesFilterInfo.destiny,
+                                            new SelectList(Model.destiny),
+                                            "nieaktywny",
+                                            new { @class = "form-control form-control-sm", id = "destiny" })
+                            </div>
+
+                            <div class="form-group col-12 col-md-3 col-sm-6 col-lg-12">
+                                <label for="brand">Typ obuwia:</label>
+                                @Html.DropDownListFor(m => m.SchoesFilterInfo.brand,
+                                            new SelectList(Model.brand),
+                                            "nieaktywny",
+                                            new { @class = "form-control form-control-sm", id = "brand" })
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="container p-0 text-center">
+                        <button type="submit" class="btn btn-primary btn-sm w-75">Zatwierdź</button>
+                    </div>
+                    
+                </p>
+            }
+        </div>
+    </div>
+
+
