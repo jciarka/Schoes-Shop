@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity.EntityFramework;
 
-namespace SportsStore.IdentityDomain.Entities
+namespace ShoesStore.IdentityDomain.Entities
 {
     public class AppUser : IdentityUser
     {

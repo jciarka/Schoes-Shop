@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SportsStore.Domain.Entities.Additions;
+using ShoesStore.Domain.Entities.Additions;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Web.Mvc;
 
 
-namespace SportsStore.Domain.Entities
+namespace ShoesStore.Domain.Entities
 {
     public class SchoesModel
     {

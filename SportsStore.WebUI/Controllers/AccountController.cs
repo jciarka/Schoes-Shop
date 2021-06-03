@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using SportsStore.WebUI.Infrastructure.Abstract;
-using SportsStore.WebUI.Models;
+using ShoesStore.WebUI.Infrastructure.Abstract;
+using ShoesStore.WebUI.Models;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 
-namespace SportsStore.WebUI.Controllers
+namespace ShoesStore.WebUI.Controllers
 {
     public class AccountController : Controller
     {

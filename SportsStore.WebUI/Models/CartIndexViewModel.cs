@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using SportsStore.Domain.Entities;
-using SportsStore.Domain.Entities.FilterHelperClasses;
-using SportsStore.WebUI.Models.ShopProducts;
+using ShoesStore.Domain.Entities;
+using ShoesStore.Domain.Entities.FilterHelperClasses;
+using ShoesStore.WebUI.Models.ShopProducts;
 
 
-namespace SportsStore.WebUI.Models
+namespace ShoesStore.WebUI.Models
 {
     public class CartIndexViewModel
     {

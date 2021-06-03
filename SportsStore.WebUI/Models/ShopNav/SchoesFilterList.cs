@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using SportsStore.Domain.Entities.FilterHelperClasses;
+using ShoesStore.Domain.Entities.FilterHelperClasses;
 
-namespace SportsStore.WebUI.Models.ShopNav
+namespace ShoesStore.WebUI.Models.ShopNav
 {
     public class SchoesFilterList
     {

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using SportsStore.Domain.Abstract;
-using SportsStore.Domain.Entities;
+using ShoesStore.Domain.Abstract;
+using ShoesStore.Domain.Entities;
 
-namespace SportsStore.WebUI.Controllers
+namespace ShoesStore.WebUI.Controllers
 {
     [Authorize(Roles = "ProductsAdmin")]
     public class AdminController : Controller

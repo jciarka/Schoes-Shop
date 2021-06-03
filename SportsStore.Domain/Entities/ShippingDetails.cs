@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace SportsStore.Domain.Entities
+namespace ShoesStore.Domain.Entities
 {
     public class ShippingDetails
     {

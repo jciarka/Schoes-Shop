@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using SportsStore.Domain;
-using SportsStore.Domain.Abstract;
-using SportsStore.WebUI.Models;
-using SportsStore.Domain.Entities;
-using SportsStore.WebUI.Models.ShopProducts;
+using ShoesStore.Domain;
+using ShoesStore.Domain.Abstract;
+using ShoesStore.WebUI.Models;
+using ShoesStore.Domain.Entities;
+using ShoesStore.WebUI.Models.ShopProducts;
 
-namespace SportsStore.WebUI.Models
+namespace ShoesStore.WebUI.Models
 {
     public class ProductsListViewModel
     {

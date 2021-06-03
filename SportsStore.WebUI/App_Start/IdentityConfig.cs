@@ -6,10 +6,10 @@ using Microsoft.AspNet.Identity;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Owin;
-using SportsStore.IdentityDomain.Entities;
-using SportsStore.IdentityDomain.Infrastructure;
+using ShoesStore.IdentityDomain.Entities;
+using ShoesStore.IdentityDomain.Infrastructure;
 
-namespace SportsStore.WebUI
+namespace ShoesStore.WebUI
 {
     public class IdentityConfig
     {

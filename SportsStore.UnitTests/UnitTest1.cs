@@ -2,17 +2,17 @@
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using SportsStore.Domain.Abstract;
-using SportsStore.Domain;
-using SportsStore.WebUI.Controllers;
+using ShoesStore.Domain.Abstract;
+using ShoesStore.Domain;
+using ShoesStore.WebUI.Controllers;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using SportsStore.WebUI.Models;
-using SportsStore.WebUI.HtmlHelpers;
-using SportsStore.Domain.Entities;
+using ShoesStore.WebUI.Models;
+using ShoesStore.WebUI.HtmlHelpers;
+using ShoesStore.Domain.Entities;
 
 
-namespace SportsStore.UnitTests
+namespace ShoesStore.UnitTests
 {/*
     [TestClass]
     public class UnitTest1

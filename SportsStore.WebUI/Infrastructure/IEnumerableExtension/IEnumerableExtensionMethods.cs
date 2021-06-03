@@ -10,11 +10,11 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
-using SportsStore.IdentityDomain.Entities;
-using SportsStore.IdentityDomain.Infrastructure;
+using ShoesStore.IdentityDomain.Entities;
+using ShoesStore.IdentityDomain.Infrastructure;
 
 
-namespace SportsStore.WebUI.Infrastructure.IEnumerableExtension
+namespace ShoesStore.WebUI.Infrastructure.IEnumerableExtension
 {
     static public class IEnumerableExtensionMethods
     {

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SportsStore.Domain.Entities;
+using ShoesStore.Domain.Entities;
 
-namespace SportsStore.Domain.Abstract
+namespace ShoesStore.Domain.Abstract
 {
     public interface IOrderProcessor
     {

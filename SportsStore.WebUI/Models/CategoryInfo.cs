@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using SportsStore.Domain.Abstract;
+using ShoesStore.Domain.Abstract;
 
-namespace SportsStore.WebUI.Models
+namespace ShoesStore.WebUI.Models
 {
     public class CategoryInfo
     {

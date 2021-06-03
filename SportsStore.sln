@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29503.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore.Domain", "SportsStore.Domain\SportsStore.Domain.csproj", "{FADB6C68-F542-4D47-96A8-02D36B6E23C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoesStore.Domain", "SportsStore.Domain\ShoesStore.Domain.csproj", "{FADB6C68-F542-4D47-96A8-02D36B6E23C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore.WebUI", "SportsStore.WebUI\SportsStore.WebUI.csproj", "{F56FC484-0176-4C52-9996-0E3AE2BD31B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoesStore.WebUI", "SportsStore.WebUI\ShoesStore.WebUI.csproj", "{F56FC484-0176-4C52-9996-0E3AE2BD31B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore.UnitTests", "SportsStore.UnitTests\SportsStore.UnitTests.csproj", "{2668FA59-2E1C-44FB-B5FE-94E2286426BB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoesStore.UnitTests", "SportsStore.UnitTests\ShoesStore.UnitTests.csproj", "{2668FA59-2E1C-44FB-B5FE-94E2286426BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore.IdentityDomain", "SportsStore.IdentityDomain\SportsStore.IdentityDomain.csproj", "{1EFA1460-47FB-4223-BB33-3870305744DF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoesStore.IdentityDomain", "SportsStore.IdentityDomain\ShoesStore.IdentityDomain.csproj", "{1EFA1460-47FB-4223-BB33-3870305744DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

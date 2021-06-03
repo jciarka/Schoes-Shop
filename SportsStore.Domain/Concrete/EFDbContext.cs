@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
-using SportsStore.Domain;
-using SportsStore.Domain.Entities;
+using ShoesStore.Domain;
+using ShoesStore.Domain.Entities;
 
-namespace SportsStore.Domain.Concrete
+namespace ShoesStore.Domain.Concrete
 {
     class EFDbContext : DbContext
     {

@@ -6,13 +6,13 @@ using System.Web.Mvc;
 using System.Configuration;
 using Ninject;
 using Moq;
-using SportsStore.Domain.Abstract;
-using SportsStore.Domain.Entities;
-using SportsStore.Domain.Concrete;
-using SportsStore.WebUI.Infrastructure.Abstract;
-using SportsStore.WebUI.Infrastructure.Concrete;
+using ShoesStore.Domain.Abstract;
+using ShoesStore.Domain.Entities;
+using ShoesStore.Domain.Concrete;
+using ShoesStore.WebUI.Infrastructure.Abstract;
+using ShoesStore.WebUI.Infrastructure.Concrete;
 
-namespace SportsStore.WebUI.Infrastructure
+namespace ShoesStore.WebUI.Infrastructure
 {
     public class NinjectDependencyResolver : IDependencyResolver
     {
@@ -49,7 +49,7 @@ namespace SportsStore.WebUI.Infrastructure
             */
 
             kernel.Bind<IProductRepository>().To<EFProductRepository>();
-            kernel.Bind<ISchoesRepository>().To<SchoesDbContext>();
+            kernel.Bind<ISchoesRepository>().To<ShoesDbContext>();
 
             EmailSettings emailSettings = new EmailSettings
             {

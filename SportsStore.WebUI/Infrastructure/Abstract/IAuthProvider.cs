@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity.EntityFramework;
 
-namespace SportsStore.WebUI.Infrastructure.Abstract
+namespace ShoesStore.WebUI.Infrastructure.Abstract
 {
     public interface IAuthProvider
     {

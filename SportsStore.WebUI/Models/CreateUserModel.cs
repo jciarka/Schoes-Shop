@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace SportsStore.WebUI.Models
+namespace ShoesStore.WebUI.Models
 {
     public class CreateUserModel
     {

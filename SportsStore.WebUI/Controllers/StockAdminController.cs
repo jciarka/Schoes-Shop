@@ -6,16 +6,16 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using SportsStore.Domain.Abstract;
-using SportsStore.Domain.Entities;
-using SportsStore.Domain;
-using SportsStore.Domain.Entities.Additions;
+using ShoesStore.Domain.Abstract;
+using ShoesStore.Domain.Entities;
+using ShoesStore.Domain;
+using ShoesStore.Domain.Entities.Additions;
 using System.Reflection;
-using SportsStore.WebUI.Models;
-using SportsStore.Domain.Entities.FilterHelperClasses;
-using SportsStore.WebUI.Models.ShopProducts;
+using ShoesStore.WebUI.Models;
+using ShoesStore.Domain.Entities.FilterHelperClasses;
+using ShoesStore.WebUI.Models.ShopProducts;
 
-namespace SportsStore.WebUI.Controllers
+namespace ShoesStore.WebUI.Controllers
 {
     [Authorize(Roles = "ProductsAdmin")]
     public class StockAdminController : Controller

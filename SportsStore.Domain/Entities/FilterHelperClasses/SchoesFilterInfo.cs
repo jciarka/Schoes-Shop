@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace SportsStore.Domain.Entities.FilterHelperClasses
+namespace ShoesStore.Domain.Entities.FilterHelperClasses
 {
     public class SchoesFilterInfo
     {

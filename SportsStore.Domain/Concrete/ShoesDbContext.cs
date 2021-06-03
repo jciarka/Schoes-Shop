@@ -4,22 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
-using SportsStore.Domain;
-using SportsStore.Domain.Abstract;
-using SportsStore.Domain.Entities;
-using SportsStore.Domain.Entities.Additions;
+using ShoesStore.Domain;
+using ShoesStore.Domain.Abstract;
+using ShoesStore.Domain.Entities;
+using ShoesStore.Domain.Entities.Additions;
 using System.IO;
 using System.Drawing;
 using System.Reflection;
-using SportsStore.Domain.Entities.FilterHelperClasses;
+using ShoesStore.Domain.Entities.FilterHelperClasses;
 
-namespace SportsStore.Domain.Concrete
+namespace ShoesStore.Domain.Concrete
 {
-    public class SchoesDbContext : DbContext, ISchoesRepository
+    public class ShoesDbContext : DbContext, ISchoesRepository
     {
-        public SchoesDbContext() : base("SchoesDb")
+        public ShoesDbContext() : base("SchoesDb")
         {
-            Database.SetInitializer<SchoesDbContext>(new SchoesDbContextInitializer());
+            Database.SetInitializer<ShoesDbContext>(new ShoesDbContextInitializer());
         }
 
         public DbSet<SchoesModel> SchoesModels { get; set; }
@@ -272,9 +272,9 @@ namespace SportsStore.Domain.Concrete
 
     }
 
-    public class SchoesDbContextInitializer : DropCreateDatabaseAlways<SchoesDbContext> //DropCreateDatabaseIfModelChanges<SchoesDbContext>
+    public class ShoesDbContextInitializer : DropCreateDatabaseAlways<ShoesDbContext> //DropCreateDatabaseIfModelChanges<ShoesDbContext>
     {
-        protected override void Seed(SchoesDbContext context)
+        protected override void Seed(ShoesDbContext context)
         {
             IList<SchoesModel> schoesModels = GenerateTestModels();
 

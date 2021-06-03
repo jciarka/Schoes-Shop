@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using SportsStore.WebUI.Infrastructure.Abstract;
-using SportsStore.WebUI.Models;
+using ShoesStore.WebUI.Infrastructure.Abstract;
+using ShoesStore.WebUI.Models;
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 
-using SportsStore.IdentityDomain.Entities;
-using SportsStore.IdentityDomain.Infrastructure;
+using ShoesStore.IdentityDomain.Entities;
+using ShoesStore.IdentityDomain.Infrastructure;
 using Microsoft.AspNet.Identity;
 using System.Threading.Tasks;
 using Microsoft.Owin;
@@ -17,7 +17,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Security.Claims;
 
-namespace SportsStore.WebUI.Infrastructure.Concrete
+namespace ShoesStore.WebUI.Infrastructure.Concrete
 {
     public class AppUserAuthProvider: IAuthProvider
     {

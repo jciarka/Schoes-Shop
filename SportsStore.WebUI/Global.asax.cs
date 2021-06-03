@@ -4,10 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-using SportsStore.Domain.Entities;
-using SportsStore.WebUI.Infrastructure.Binders;
+using ShoesStore.Domain.Entities;
+using ShoesStore.WebUI.Infrastructure.Binders;
 
-namespace SportsStore.WebUI
+namespace ShoesStore.WebUI
 {
     public class MvcApplication : System.Web.HttpApplication
     {

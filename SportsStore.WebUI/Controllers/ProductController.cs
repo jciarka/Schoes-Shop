@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using SportsStore.Domain.Abstract;
-using SportsStore.Domain.Entities;
-using SportsStore.WebUI.Models;
-using SportsStore.WebUI.Models.ShopProducts;
-using SportsStore.Domain.Concrete;//```````````````````````````
-using SportsStore.Domain.Entities.Additions;//```````````````````````````
+using ShoesStore.Domain.Abstract;
+using ShoesStore.Domain.Entities;
+using ShoesStore.WebUI.Models;
+using ShoesStore.WebUI.Models.ShopProducts;
+using ShoesStore.Domain.Concrete;//```````````````````````````
+using ShoesStore.Domain.Entities.Additions;//```````````````````````````
 
-namespace SportsStore.WebUI.Controllers
+namespace ShoesStore.WebUI.Controllers
 {
     public class ProductController : Controller
     {
@@ -18,7 +18,7 @@ namespace SportsStore.WebUI.Controllers
         public int PageSize = 4;
         public ProductController(IProductRepository productRepository)
         {
-            /*using (SchoesDbContext bdContext = new SchoesDbContext())
+            /*using (ShoesDbContext bdContext = new ShoesDbContext())
             {
                 SchoesModel model = new SchoesModel()
                 {

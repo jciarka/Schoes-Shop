@@ -343,13 +343,13 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SportsStore.Domain\SportsStore.Domain.csproj">
+    <ProjectReference Include="..\SportsStore.Domain\ShoesStore.Domain.csproj">
       <Project>{fadb6c68-f542-4d47-96a8-02d36b6e23c6}</Project>
-      <Name>SportsStore.Domain</Name>
+      <Name>ShoesStore.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SportsStore.IdentityDomain\SportsStore.IdentityDomain.csproj">
+    <ProjectReference Include="..\SportsStore.IdentityDomain\ShoesStore.IdentityDomain.csproj">
       <Project>{1efa1460-47fb-4223-bb33-3870305744df}</Project>
-      <Name>SportsStore.IdentityDomain</Name>
+      <Name>ShoesStore.IdentityDomain</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SportsStore.Domain.Abstract;
-using SportsStore.Domain.Entities;
+using ShoesStore.Domain.Abstract;
+using ShoesStore.Domain.Entities;
 using System.Net;
 using System.Net.Mail;
 
 
-namespace SportsStore.Domain.Concrete
+namespace ShoesStore.Domain.Concrete
 {
     public class EmailSettings 
     {

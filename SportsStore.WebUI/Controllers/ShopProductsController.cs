@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
-using SportsStore.Domain;
-using SportsStore.Domain.Abstract;
-using SportsStore.Domain.Entities;
-using SportsStore.Domain.Entities.Additions;
+using ShoesStore.Domain;
+using ShoesStore.Domain.Abstract;
+using ShoesStore.Domain.Entities;
+using ShoesStore.Domain.Entities.Additions;
 using System.Reflection;
 using System.Web.Mvc;
-using SportsStore.WebUI.Models;
-using SportsStore.Domain.Entities.FilterHelperClasses;
-using SportsStore.WebUI.Models.ShopProducts;
+using ShoesStore.WebUI.Models;
+using ShoesStore.Domain.Entities.FilterHelperClasses;
+using ShoesStore.WebUI.Models.ShopProducts;
 
-namespace SportsStore.WebUI.Controllers
+namespace ShoesStore.WebUI.Controllers
 {
     public class ShopProductsController : Controller
     {

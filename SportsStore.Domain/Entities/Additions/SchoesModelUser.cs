@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace SportsStore.Domain.Entities.Additions
+namespace ShoesStore.Domain.Entities.Additions
 {
     public class SchoesModelUser
     {

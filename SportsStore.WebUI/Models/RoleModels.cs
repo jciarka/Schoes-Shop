@@ -4,14 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity.Owin;
-using SportsStore.WebUI.Models;
-using SportsStore.IdentityDomain.Entities;
-using SportsStore.IdentityDomain.Infrastructure;
+using ShoesStore.WebUI.Models;
+using ShoesStore.IdentityDomain.Entities;
+using ShoesStore.IdentityDomain.Infrastructure;
 using Microsoft.AspNet.Identity;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace SportsStore.WebUI.Models
+namespace ShoesStore.WebUI.Models
 {
     public class RoleEditModel
     {

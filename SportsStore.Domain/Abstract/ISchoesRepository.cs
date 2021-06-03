@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
-using SportsStore.Domain.Entities;
-using SportsStore.Domain.Entities.Additions;
-using SportsStore.Domain.Entities.FilterHelperClasses;
+using ShoesStore.Domain.Entities;
+using ShoesStore.Domain.Entities.Additions;
+using ShoesStore.Domain.Entities.FilterHelperClasses;
 
-namespace SportsStore.Domain.Abstract
+namespace ShoesStore.Domain.Abstract
 {
     public interface ISchoesRepository
     {

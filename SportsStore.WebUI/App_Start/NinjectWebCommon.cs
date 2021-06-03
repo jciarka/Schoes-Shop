@@ -1,7 +1,7 @@
-[assembly: WebActivator.PreApplicationStartMethod(typeof(SportsStore.WebUI.App_Start.NinjectWebCommon), "Start")]
-[assembly: WebActivator.ApplicationShutdownMethodAttribute(typeof(SportsStore.WebUI.App_Start.NinjectWebCommon), "Stop")]
+[assembly: WebActivator.PreApplicationStartMethod(typeof(ShoesStore.WebUI.App_Start.NinjectWebCommon), "Start")]
+[assembly: WebActivator.ApplicationShutdownMethodAttribute(typeof(ShoesStore.WebUI.App_Start.NinjectWebCommon), "Stop")]
 
-namespace SportsStore.WebUI.App_Start
+namespace ShoesStore.WebUI.App_Start
 {
     using System;
     using System.Web;
@@ -10,8 +10,8 @@ namespace SportsStore.WebUI.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
-    using SportsStore.WebUI.Infrastructure.Abstract;
-    using SportsStore.WebUI.Infrastructure.Concrete;
+    using ShoesStore.WebUI.Infrastructure.Abstract;
+    using ShoesStore.WebUI.Infrastructure.Concrete;
 
 
     public static class NinjectWebCommon 
@@ -57,7 +57,7 @@ namespace SportsStore.WebUI.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             System.Web.Mvc.DependencyResolver.SetResolver(new
-                SportsStore.WebUI.Infrastructure.NinjectDependencyResolver(kernel));
+                ShoesStore.WebUI.Infrastructure.NinjectDependencyResolver(kernel));
         }        
     }
 }

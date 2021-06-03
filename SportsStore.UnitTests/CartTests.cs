@@ -2,10 +2,10 @@
 using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SportsStore.Domain.Entities;
+using ShoesStore.Domain.Entities;
 using System.Linq;
 
-namespace SportsStore.UnitTests
+namespace ShoesStore.UnitTests
 {
     /*
     /// <summary>

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
 
-namespace SportsStore.IdentityDomain.Entities
+namespace ShoesStore.IdentityDomain.Entities
 {
     public class AppRole : IdentityRole
     {

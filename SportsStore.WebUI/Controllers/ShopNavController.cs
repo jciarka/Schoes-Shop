@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using SportsStore.Domain.Abstract;
-using SportsStore.Domain.Entities;
-using SportsStore.WebUI.Models;
-using SportsStore.Domain.Concrete;//```````````````````````````
-using SportsStore.Domain.Entities.Additions;//```
-using SportsStore.WebUI.Infrastructure.IEnumerableExtension;
-using SportsStore.WebUI.Models.ShopNav;
-using SportsStore.Domain.Entities.FilterHelperClasses;
-using SportsStore.WebUI.Infrastructure.Abstract;
+using ShoesStore.Domain.Abstract;
+using ShoesStore.Domain.Entities;
+using ShoesStore.WebUI.Models;
+using ShoesStore.Domain.Concrete;//```````````````````````````
+using ShoesStore.Domain.Entities.Additions;//```
+using ShoesStore.WebUI.Infrastructure.IEnumerableExtension;
+using ShoesStore.WebUI.Models.ShopNav;
+using ShoesStore.Domain.Entities.FilterHelperClasses;
+using ShoesStore.WebUI.Infrastructure.Abstract;
 using Microsoft.AspNet.Identity.EntityFramework;
 
-namespace SportsStore.WebUI.Controllers
+namespace ShoesStore.WebUI.Controllers
 {
     public class ShopNavController : Controller
     {
@@ -108,10 +108,10 @@ namespace SportsStore.WebUI.Controllers
             /*
                     public PartialViewResult MenuBar()
                     {
-                        /*using (SchoesDbContext bdContext = new SchoesDbContext())
+                        /*using (ShoesDbContext bdContext = new ShoesDbContext())
                         SchoesModelUser[] modelUsersArray = null;
 
-                        using (SchoesDbContext bdContext = new SchoesDbContext())
+                        using (ShoesDbContext bdContext = new ShoesDbContext())
                         {
                             SchoesModel model = new SchoesModel()
                             {

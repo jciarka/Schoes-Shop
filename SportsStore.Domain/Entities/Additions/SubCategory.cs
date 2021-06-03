@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace SportsStore.Domain.Entities.Additions
+namespace ShoesStore.Domain.Entities.Additions
 {
     public class SubCategory
     {

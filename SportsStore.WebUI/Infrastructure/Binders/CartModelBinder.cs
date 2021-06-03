@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using SportsStore.Domain.Entities;
+using ShoesStore.Domain.Entities;
 
-namespace SportsStore.WebUI.Infrastructure.Binders
+namespace ShoesStore.WebUI.Infrastructure.Binders
 {
     public class CartModelBinder : IModelBinder
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SportsStore.Domain.Entities.Additions
+namespace ShoesStore.Domain.Entities.Additions
 {
     public class Comment
     {

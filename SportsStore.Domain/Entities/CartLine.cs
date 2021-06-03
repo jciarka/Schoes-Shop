@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace SportsStore.Domain.Entities
+namespace ShoesStore.Domain.Entities
 {
     public class CartLine
     {

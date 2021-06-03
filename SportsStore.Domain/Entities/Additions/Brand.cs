@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Web.Mvc;
 
-namespace SportsStore.Domain.Entities.Additions
+namespace ShoesStore.Domain.Entities.Additions
 {
     public class Brand
     {

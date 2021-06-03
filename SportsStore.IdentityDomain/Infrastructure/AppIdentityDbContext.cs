@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity;
-using SportsStore.IdentityDomain.Entities;
+using ShoesStore.IdentityDomain.Entities;
 
-namespace SportsStore.IdentityDomain.Infrastructure
+namespace ShoesStore.IdentityDomain.Infrastructure
 {
     public class AppIdentityDbContext : IdentityDbContext<AppUser>
     {

@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using SportsStore.Domain.Abstract;
-using SportsStore.Domain.Entities;
-using SportsStore.WebUI.Models;
+using ShoesStore.Domain.Abstract;
+using ShoesStore.Domain.Entities;
+using ShoesStore.WebUI.Models;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
-using SportsStore.Domain;
-using SportsStore.Domain.Entities.Additions;
+using ShoesStore.Domain;
+using ShoesStore.Domain.Entities.Additions;
 using System.Reflection;
-using SportsStore.Domain.Entities.FilterHelperClasses;
-using SportsStore.WebUI.Models.ShopProducts;
-using SportsStore.WebUI.Models.ProductDetails;
+using ShoesStore.Domain.Entities.FilterHelperClasses;
+using ShoesStore.WebUI.Models.ShopProducts;
+using ShoesStore.WebUI.Models.ProductDetails;
 
 
-namespace SportsStore.WebUI.Controllers
+namespace ShoesStore.WebUI.Controllers
 {
     //[Authorize(Roles= "StandardUser")]
     public class CartController : Controller

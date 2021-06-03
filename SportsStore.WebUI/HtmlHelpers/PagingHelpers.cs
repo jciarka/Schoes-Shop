@@ -4,10 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Text;
 using System.Web.Mvc;
-using SportsStore.WebUI.Models;
-using SportsStore.WebUI.Models.ShopProducts;
+using ShoesStore.WebUI.Models;
+using ShoesStore.WebUI.Models.ShopProducts;
 
-namespace SportsStore.WebUI.HtmlHelpers
+namespace ShoesStore.WebUI.HtmlHelpers
 {
     public static class PagingHelpers
     {

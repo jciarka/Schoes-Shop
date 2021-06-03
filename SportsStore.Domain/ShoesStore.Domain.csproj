@@ -79,7 +79,7 @@
     <Compile Include="Concrete\EFDbContext.cs" />
     <Compile Include="Concrete\EFProductRepository.cs" />
     <Compile Include="Concrete\EmailOrderProcessor.cs" />
-    <Compile Include="Concrete\SchoesDbContext.cs" />
+    <Compile Include="Concrete\ShoesDbContext.cs" />
     <Compile Include="Entities\Additions\Brand.cs" />
     <Compile Include="Entities\Additions\Comment.cs" />
     <Compile Include="Entities\Additions\SchoesImage.cs" />
